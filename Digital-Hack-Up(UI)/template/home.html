@@ -1,0 +1,75 @@
+
+<div class="row">
+    <div class="col ">
+        <h3>CSV File Upload</h3>
+        <form role="form" enctype="multipart/form-data" name="myForm"> 
+           <div class="row jumbotron">
+                   <div class="col-md-9">
+                        <input type="file" id="file1" name="file" style="margin-bottom: 1em;" />
+                   </div>
+                   <div class="col-md-3">
+                        <button type="button" class="btn btn-primary btn-block" ng-click="upload()">Submit</button>
+                      <!--   <button type="submit" ng-click="upload()">Submit</button> -->
+                   </div>
+               </div> 
+         </form>
+    </div>
+</div>
+
+<div class="row">
+   <div class="col">
+        <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>LIMIT_BAL</th>
+                        <th>SEX</th>
+                        <th>EDUCATION</th>
+                        <th>MARRIAGE</th>
+                        <th>AGE</th>
+                        <th>Payment in September 2005</th>
+                        <th>Payment in August 2005</th>
+                        <th>Payment in July 2005</th>
+                        <th>Payment in June 2005</th>
+                        <th>Payment in May 2005</th>
+                        <th>Payment in April 2005</th>
+                        <th>Bill in September 2005</th>
+                        <th>Bill in August 2005</th>
+                        <th>Bill in July 2005</th>
+                        <th>Bill in June 2005</th>
+                        <th>Bill in May 2005</th>
+                        <th>Bill in April 2005</th>
+                        <th>DEFAULT PAYMENT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="u in userInfo">
+                        <td>{{u.ID}}</td>
+                        <td>{{u.Name}}</td>
+                        <td>{{u.LIMIT_BAL}}</td>
+                        <td>{{u.SEX}}</td>
+                        <td>{{u.EDUCATION}}</td>
+                        <td>{{u.MARRIAGE}}</td>
+                        <td>{{u.AGE}}</td>
+                        <td>{{u.PAY_0}}</td>
+                        <td>{{u.PAY_2}}</td>
+                        <td>{{u.PAY_3}}</td>
+                        <td>{{u.PAY_4}}</td>
+                        <td>{{u.PAY_5}}</td>
+                        <td>{{u.PAY_6}}</td>
+                        <td>{{u.BILL_AMT1}}</td>
+                        <td>{{u.BILL_AMT2}}</td>
+                        <td>{{u.BILL_AMT3}}</td>
+                        <td>{{u.BILL_AMT4}}</td>
+                        <td>{{u.BILL_AMT5}}</td>
+                        <td>{{u.BILL_AMT6}}</td>
+                        <td>{{u["default.payment.next.month"]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+   </div>
+</div>
+
+
